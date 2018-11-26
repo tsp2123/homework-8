@@ -4,7 +4,7 @@ var margin = { top: 30, left: 30, right: 30, bottom: 30 }
 var height = 400 - margin.top - margin.bottom
 var width = 780 - margin.left - margin.right
 
-// Grab & create SVG
+// Create SVG
 var svg = d3
   .select('#chart-2')
   .append('svg')
@@ -13,7 +13,7 @@ var svg = d3
   .append('g')
   .attr('transform', `translate(${margin.left}, ${margin.top})`)
 
-// Creating the machinery for pie chart and some scales
+// Creating Pie Chart Scales
 var pie = d3.pie().value(function(d) {
   return d.minutes
 })
